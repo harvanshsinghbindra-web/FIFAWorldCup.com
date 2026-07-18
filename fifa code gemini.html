@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA World Cup 2026 - Premium Interactive Team Hub</title>
+    <!-- Tailwind CSS for rich modern styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Google Font for supreme readability -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Chart.js for beautiful statistical analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- FontAwesome for high fidelity icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at center, #07111e 0%, #02050a 100%);
+        }
+        /* Custom scrollbar to match the high-end dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #02050a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d97706;
+        }
+    </style>
+</head>
+<body class="text-slate-100 min-h-screen relative overflow-x-hidden antialiased">
+
+    <!-- PERMANENT TROPHY BADGE (Top-Right Corner of every page/view) -->
+    <div class="fixed top-4 right-4 z-50 flex flex-col items-end pointer-events-none sm:pointer-events-auto">
+        <div class="bg-black/85 backdrop-blur-md border border-amber-500/40 rounded-2xl p-2.5 shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all duration-300 hover:scale-105 flex items-center gap-3">
+            <div class="text-right hidden sm:block">
+                <span class="block text-[10px] font-bold tracking-widest text-amber-500 uppercase">Official Hub</span>
+                <span class="block text-xs font-extrabold text-white">WORLD CUP 2026</span>
+            </div>
+            <!-- Verification of the user's specific trophy image -->
+            <img src="image_f058de.jpg" alt="FIFA World Cup Trophy" class="h-16 w-auto object-contain rounded-lg border border-amber-500/20" onerror="this.src='https://placehold.co/150x220/111827/f59e0b?text=FIFA+Trophy'">
+        </div>
+    </div>
+
+    <!-- App Container -->
+    <div class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+        
+        <!-- HEADER BAR -->
+        <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 pb-6 border-b border-slate-800/85">
+            <div class="flex items-center gap-3">
+                <div class="p-3 bg-gradient-to-tr from-emerald-600 to-amber-500 rounded-2xl shadow-lg">
+                    <i class="fa-solid fa-trophy text-2xl text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-amber-400 bg-clip-text text-transparent">
+                        FIFA WORLD CUP 2026
+                    </h1>
+                    <!-- removed "Participating Teams Interactive Analytical Engine" -->
+                    <p class="text-xs sm:text-sm text-slate-400 font-medium mt-0.5">The official 48-nation group layouts, squads, matches, and real-time tournament progression tracker.</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- VIEW 1: HOME GRID (TEAM SELECTION) -->
+        <main id="home-view" class="transition-all duration-300 opacity-100 block">
+            
+            <!-- Hero Stats Segment -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-gradient-to-br from-slate-900/90 to-slate-950/90 border border-slate-800 rounded-2xl p-5 shadow-lg relative overflow-hidden group">
+                    <div class="absolute -right-4 -bottom-4 text-emerald-500/5 text-8xl font-black group-hover:scale-110 transition-transform">48</div>
+                    <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider">Tournament Size</p>
+                    <p class="text-3xl font-extrabold text-white mt-1">48 <span class="text-sm font-medium text-slate-400">Nations</span></p>
+                    <p class="text-xs text-emerald-400 font-medium mt-2"><i class="fa-solid fa-earth-americas mr-1"></i> Historic North American Expansion</p>
+                </div>
+                <div class="bg-gradient-to-br from-slate-900/90 to-slate-950/90 border border-slate-800 rounded-2xl p-5 shadow-lg relative overflow-hidden group">
+                    <div class="absolute -right-4 -bottom-4 text-amber-500/5 text-8xl font-black group-hover:scale-110 transition-transform">104</div>
+                    <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider">Total Matches Played</p>
+                    <p class="text-3xl font-extrabold text-white mt-1">104 <span class="text-sm font-medium text-slate-400">Matches</span></p>
+                    <p class="text-xs text-amber-400 font-medium mt-2"><i class="fa-solid fa-calendar-days mr-1"></i> Across Canada, Mexico & USA</p>
+                </div>
+                <div class="bg-gradient-to-br from-slate-900/90 to-slate-950/90 border border-slate-800 rounded-2xl p-5 shadow-lg relative overflow-hidden group">
+                    <div class="absolute -right-4 -bottom-4 text-blue-500/5 text-8xl font-black group-hover:scale-110 transition-transform">8.5M</div>
+                    <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider">Global Fans Present</p>
+                    <p class="text-3xl font-extrabold text-white mt-1">8.5M+ <span class="text-sm font-medium text-slate-400">Spectators</span></p>
+                    <p class="text-xs text-blue-400 font-medium mt-2"><i class="fa-solid fa-bolt mr-1"></i> Global Live Broadcast Hub</p>
+                </div>
+            </div>
+
+            <!-- Team Selection Heading -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-6 gap-4">
+                <div>
+                    <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-earth-americas text-amber-400"></i> Nations Database
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-1">Click on any of the 48 qualified countries to explore custom tactics, rosters, matches, win charts, and fan quizzes.</p>
+                </div>
+                
+                <!-- Interactive Search & Confederation Filters -->
+                <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+                    <!-- Confederation Selectors -->
+                    <div class="flex flex-wrap gap-1 bg-slate-950 p-1 rounded-xl border border-slate-800">
+                        <button onclick="filterConfederation('ALL')" id="filter-all" class="conf-btn px-2.5 py-1.5 text-[10px] sm:text-xs font-bold rounded-lg bg-amber-500 text-black transition-all">ALL</button>
+                        <button onclick="filterConfederation('UEFA')" id="filter-uefa" class="conf-btn px-2.5 py-1.5 text-[10px] sm:text-xs font-bold rounded-lg hover:bg-slate-900 hover:text-white transition-all text-slate-400">UEFA</button>
+                        <button onclick="filterConfederation('CONMEBOL')" id="filter-conmebol" class="conf-btn px-2.5 py-1.5 text-[10px] sm:text-xs font-bold rounded-lg hover:bg-slate-900 hover:text-white transition-all text-slate-400">CONMEBOL</button>
+                        <button onclick="filterConfederation('CONCACAF')" id="filter-concacaf" class="conf-btn px-2.5 py-1.5 text-[10px] sm:text-xs font-bold rounded-lg hover:bg-slate-900 hover:text-white transition-all text-slate-400">CONCACAF</button>
+                        <button onclick="filterConfederation('CAF')" id="filter-caf" class="conf-btn px-2.5 py-1.5 text-[10px] sm:text-xs font-bold rounded-lg hover:bg-slate-900 hover:text-white transition-all text-slate-400">CAF</button>
+                        <button onclick="filterConfederation('AFC')" id="filter-afc" class="conf-btn px-2.5 py-1.5 text-[10px] sm:text-xs font-bold rounded-lg hover:bg-slate-900 hover:text-white transition-all text-slate-400">AFC</button>
+                        <button onclick="filterConfederation('OFC')" id="filter-ofc" class="conf-btn px-2.5 py-1.5 text-[10px] sm:text-xs font-bold rounded-lg hover:bg-slate-900 hover:text-white transition-all text-slate-400">OFC</button>
+                    </div>
+
+                    <!-- Search bar -->
+                    <div class="relative w-full sm:w-64">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
+                            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                        </span>
+                        <input type="text" id="teamSearch" onkeyup="filterTeams()" placeholder="Search nations or groups..." class="w-full pl-9 pr-4 py-2.5 text-xs bg-slate-900 border border-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 text-white transition-all">
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEAM GRID CONTAINER -->
+            <div id="teams-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Injected dynamically via JavaScript to ensure efficient rendering of all 48 teams -->
+            </div>
+        </main>
+
+        <!-- VIEW 2: DETAILED TEAM IMMERSIVE HUB -->
+        <main id="team-detail-view" class="transition-all duration-300 opacity-0 hidden">
+            
+            <!-- Breadcrumbs / Top Navigation Panel -->
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800/60">
+                <button onclick="showHomeView()" class="flex items-center gap-2 px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-amber-500/40 rounded-xl text-xs sm:text-sm font-semibold transition-all group text-slate-200">
+                    <i class="fa-solid fa-chevron-left group-hover:-translate-x-1 transition-transform"></i> Return to Nations List
+                </button>
+                <div class="flex items-center gap-2">
+                    <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="text-xs font-semibold text-slate-400 tracking-wider uppercase">Official Team Analysis</span>
+                </div>
+            </div>
+
+            <!-- TEAM HEADER CARD -->
+            <div id="dynamic-team-header" class="relative overflow-hidden rounded-3xl p-6 md:p-8 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border border-slate-800 shadow-2xl mb-8">
+                <!-- Dynamic Content injected here -->
+            </div>
+
+            <!-- INTERACTIVE MULTI-TAB BUTTONS (Prevents Overwhelming Data) -->
+            <div class="flex flex-wrap gap-2 md:gap-3 p-1.5 bg-slate-950/80 border border-slate-800/80 rounded-2xl mb-8 overflow-x-auto">
+                <button onclick="switchTab('overview-tab')" id="btn-overview-tab" class="tab-btn flex-1 min-w-[120px] py-3 px-4 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 flex items-center justify-center gap-2 bg-amber-500 text-black shadow-md shadow-amber-500/10">
+                    <i class="fa-solid fa-chart-line"></i> Overview & Odds
+                </button>
+                <button onclick="switchTab('players-tab')" id="btn-players-tab" class="tab-btn flex-1 min-w-[120px] py-3 px-4 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 bg-transparent text-slate-400 hover:text-white hover:bg-slate-900">
+                    <i class="fa-solid fa-users"></i> Key Players
+                </button>
+                <button onclick="switchTab('stats-tab')" id="btn-stats-tab" class="tab-btn flex-1 min-w-[120px] py-3 px-4 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 bg-transparent text-slate-400 hover:text-white hover:bg-slate-900">
+                    <i class="fa-solid fa-chart-pie"></i> Tactical Stats
+                </button>
+                <button onclick="switchTab('matches-tab')" id="btn-matches-tab" class="tab-btn flex-1 min-w-[120px] py-3 px-4 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 bg-transparent text-slate-400 hover:text-white hover:bg-slate-900">
+                    <i class="fa-solid fa-history"></i> Match History
+                </button>
+                <button onclick="switchTab('quiz-tab')" id="btn-quiz-tab" class="tab-btn flex-1 min-w-[120px] py-3 px-4 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 bg-transparent text-slate-400 hover:text-white hover:bg-slate-900">
+                    <i class="fa-solid fa-gamepad"></i> Trivia Challenge
+                </button>
+            </div>
+
+            <!-- TAB CONTENT 1: OVERVIEW & ODDS -->
+            <div id="overview-tab" class="tab-panel space-y-6 block">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Quick Info Cards -->
+                    <div class="lg:col-span-1 flex flex-col gap-6">
+                        <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 shadow-md">
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-amber-500 mb-4 flex items-center gap-2">
+                                <i class="fa-solid fa-id-card"></i> Technical Profile
+                            </h3>
+                            <ul class="space-y-4 text-xs sm:text-sm">
+                                <li class="flex justify-between pb-3 border-b border-slate-800/60">
+                                    <span class="text-slate-400">Head Coach</span>
+                                    <span id="overview-coach" class="font-semibold text-white">-</span>
+                                </li>
+                                <li class="flex justify-between pb-3 border-b border-slate-800/60">
+                                    <span class="text-slate-400">Official FIFA Ranking</span>
+                                    <span id="overview-ranking" class="font-semibold text-white">-</span>
+                                </li>
+                                <li class="flex justify-between pb-3 border-b border-slate-800/60">
+                                    <span class="text-slate-400">Confederation</span>
+                                    <span id="overview-confed" class="font-semibold text-white">-</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span class="text-slate-400">World Cup 2026 Group</span>
+                                    <span id="overview-group" class="font-semibold text-amber-400">-</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Win Rate Summary Indicator -->
+                        <div class="bg-gradient-to-br from-slate-900/80 to-indigo-950/20 border border-slate-800 rounded-2xl p-5 shadow-md">
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-400 mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-shield-halved"></i> Estimated Win Probability
+                            </h3>
+                            <p class="text-xs text-slate-400 mb-4">Simulated global victory index computed via active squad form and tournament stats.</p>
+                            <div class="flex items-end gap-3">
+                                <span id="odds-percentage" class="text-4xl font-black text-emerald-400">-</span>
+                                <div class="pb-1">
+                                    <span id="odds-trend-indicator" class="text-xs font-bold bg-emerald-500/15 text-emerald-400 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                        <i class="fa-solid fa-arrow-trend-up"></i> Live Forecast
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Progression Chart (Odds Change over given stages) -->
+                    <div class="lg:col-span-2 bg-slate-900/80 border border-slate-800 rounded-2xl p-5 shadow-md flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-sm font-bold uppercase tracking-wider text-amber-500 flex items-center gap-2">
+                                        <i class="fa-solid fa-chart-line"></i> Winning Probability Evolution
+                                    </h3>
+                                    <p class="text-xs text-slate-400 mt-1">Real-time simulation showing probability progression across five major tournament stages.</p>
+                                </div>
+                                <span class="text-xs bg-slate-950 border border-slate-800 text-slate-400 px-2 py-1 rounded-lg font-mono">Dynamic Line Tracker</span>
+                            </div>
+                        </div>
+                        <div class="h-64 md:h-72 w-full mt-4">
+                            <canvas id="oddsChart"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TAB CONTENT 2: KEY PLAYERS (DYNAMIC SELECTION & STATS CARDS) -->
+            <div id="players-tab" class="tab-panel space-y-6 hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                    
+                    <!-- Star Player Navigation Buttons -->
+                    <div class="lg:col-span-4 flex flex-col gap-3" id="player-selector-list">
+                        <!-- Instantiated Dynamically through JS -->
+                    </div>
+
+                    <!-- Highlighted Player Dynamic Card -->
+                    <div id="player-highlight-card" class="lg:col-span-8 bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl transition-all duration-300">
+                        <!-- Dynamic Player profile content populated by selectPlayer() -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TAB CONTENT 3: TACTICAL STATS -->
+            <div id="stats-tab" class="tab-panel space-y-6 hidden">
+                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-md">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 pb-4 border-b border-slate-800/60 gap-4">
+                        <div>
+                            <h3 class="text-base font-bold text-amber-500 uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-chart-pie"></i> Squad Tactical Blueprint
+                            </h3>
+                            <p class="text-xs text-slate-400 mt-1">Detailed statistical breakdown of structural line play and overall tactical behavior.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="h-64 sm:h-80 w-full relative">
+                            <canvas id="radarChart"></canvas>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="text-sm font-bold uppercase text-slate-300 tracking-wider">Historical Performance Index</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                This blueprint is generated through statistical analysis of play throughout 2026. Use this radar map to understand the squad's stylistic balance between defensive caution and attacking risk.
+                            </p>
+                            <div class="grid grid-cols-2 gap-3 pt-2">
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                                    <span class="block text-[10px] text-slate-500 font-bold uppercase tracking-wider">Avg Goal Rate</span>
+                                    <span class="text-sm font-bold text-slate-200 mt-1">2.4 per game</span>
+                                </div>
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                                    <span class="block text-[10px] text-slate-500 font-bold uppercase tracking-wider">Pass Success</span>
+                                    <span class="text-sm font-bold text-emerald-400 mt-1">87.5% Acc.</span>
+                                </div>
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                                    <span class="block text-[10px] text-slate-500 font-bold uppercase tracking-wider">Clean Sheets</span>
+                                    <span class="text-sm font-bold text-amber-500 mt-1">High Standard</span>
+                                </div>
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                                    <span class="block text-[10px] text-slate-500 font-bold uppercase tracking-wider">xG Generated</span>
+                                    <span class="text-sm font-bold text-slate-200 mt-1">2.35 Expected</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB CONTENT 4: MATCH HISTORY -->
+            <div id="matches-tab" class="tab-panel space-y-6 hidden">
+                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-md">
+                    <div class="mb-6">
+                        <h3 class="text-base font-bold text-amber-500 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-clock-rotate-left"></i> World Cup 2026 Play History
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-1">Official matches played by this team in Canada, Mexico & the United States during the historic 48-nation tournament.</p>
+                    </div>
+
+                    <!-- Dynamic Timeline -->
+                    <div id="matches-timeline" class="space-y-6 relative before:absolute before:inset-0 before:left-3 md:before:left-1/2 before:w-0.5 before:bg-slate-800 before:h-full">
+                        <!-- Injected dynamically via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB CONTENT 5: TRIVIA CHALLENGE -->
+            <div id="quiz-tab" class="tab-panel space-y-6 hidden">
+                <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl max-w-2xl mx-auto border-amber-500/10">
+                    
+                    <!-- Quiz Intro Screen -->
+                    <div id="quiz-intro" class="text-center space-y-6 py-6">
+                        <div class="h-16 w-16 mx-auto bg-amber-500/10 border border-amber-500/30 rounded-full flex items-center justify-center text-amber-500 text-3xl">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+                        <div>
+                            <h3 id="quiz-title-name" class="text-2xl font-black text-white">Fan Challenge</h3>
+                            <p class="text-slate-400 text-xs sm:text-sm mt-2 max-w-md mx-auto">
+                                Put your football intellect to the test! Face a customized 3-question fan challenge focused strictly on this country's World Cup legacy.
+                            </p>
+                        </div>
+                        <button onclick="startTrivia()" class="px-8 py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-black font-extrabold text-sm rounded-xl tracking-wider uppercase transition-all shadow-lg hover:shadow-amber-500/20">
+                            Start Fan Challenge
+                        </button>
+                    </div>
+
+                    <!-- Dynamic Trivia Question Screen -->
+                    <div id="quiz-question-container" class="hidden space-y-6">
+                        <div class="flex justify-between items-center text-xs text-slate-500 border-b border-slate-800 pb-3">
+                            <span class="font-bold uppercase text-amber-500" id="quiz-team-badge">FAN CHALLENGE</span>
+                            <span class="font-mono bg-slate-950 px-2 py-1 rounded-md" id="question-index">Question 1 of 3</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white leading-relaxed" id="question-text">
+                            Placeholder Question?
+                        </h4>
+                        <!-- Option Buttons -->
+                        <div class="grid grid-cols-1 gap-3" id="quiz-options">
+                            <!-- Populated dynamic answers -->
+                        </div>
+
+                        <!-- Feedback Panel -->
+                        <div id="quiz-feedback" class="hidden p-4 rounded-xl border transition-all text-xs sm:text-sm">
+                            <div class="flex items-start gap-3">
+                                <span id="feedback-icon" class="text-lg font-bold"></span>
+                                <div>
+                                    <p class="font-bold" id="feedback-status"></p>
+                                    <p class="text-slate-300 mt-1" id="feedback-explanation"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Button -->
+                        <div class="flex justify-end pt-3">
+                            <button id="btn-quiz-next" onclick="nextQuestion()" class="hidden px-6 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-950 text-xs font-bold rounded-xl transition-all">
+                                Next Question <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Trivia Finished Screen -->
+                    <div id="quiz-result" class="hidden text-center space-y-6 py-6">
+                        <div class="h-20 w-20 mx-auto rounded-full flex items-center justify-center text-4xl" id="result-medal">
+                            🥇
+                        </div>
+                        <div>
+                            <p class="text-slate-400 text-xs uppercase tracking-widest font-bold">Challenge Complete</p>
+                            <h3 class="text-2xl font-black text-white mt-1" id="result-score">You scored 3/3!</h3>
+                            <p class="text-slate-400 text-xs sm:text-sm mt-2 max-w-xs mx-auto" id="result-commentary">
+                                Incredible work! You've proven your loyalty and deep historical understanding of this team.
+                            </p>
+                        </div>
+                        <div class="flex justify-center gap-3">
+                            <button onclick="startTrivia()" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold rounded-xl transition-all">
+                                <i class="fa-solid fa-rotate mr-1"></i> Retry Quiz
+                            </button>
+                            <button onclick="switchTab('overview-tab')" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-black text-xs font-bold rounded-xl transition-all">
+                                Back to Overview
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+
+        <!-- FOOTER BAR -->
+        <footer class="mt-16 pt-6 border-t border-slate-800 text-center text-xs text-slate-500 space-y-2">
+            <p>© 2026 FIFA World Cup™ Official Fan Portal. Real-time simulated statistics and tournament tracker.</p>
+            <p class="text-slate-600 flex items-center justify-center gap-2">
+                <span>Optimized for both desktop & mobile views</span> • 
+                <span>All statistics sourced from fifa.com</span>
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT LOGIC & WORLD CUP DATABASE -->
+    <script>
+        // Official 48 Teams Database organized by correct FIFA 2026 Group assignments
+        const worldCupData = {
+            // Group J
+            argentina: {
+                id: 'argentina',
+                name: 'Argentina',
+                group: 'Group J',
+                ranking: '#1',
+                confed: 'CONMEBOL',
+                coach: 'Lionel Scaloni',
+                colors: { from: 'from-cyan-500/20', to: 'to-sky-400/20', accent: '#06b6d4' },
+                flag: '🇦🇷',
+                winRate: '58%',
+                winTrend: '+58% Final Prob.',
+                stats: { possession: 64, attack: 94, defence: 88, passing: 92, physical: 80, saves: 85 },
+                oddsProgression: [55, 62, 68, 74, 85],
+                players: [
+                    {
+                        name: "Lionel Messi",
+                        num: 10,
+                        pos: "Forward / Captain",
+                        desc: "The absolute legend leading his final major tournament run. Continues to control build-up phases with majestic vision and playmaking.",
+                        stats: { Speed: 76, Shooting: 92, Passing: 98, Dribbling: 96, Defense: 40, Physical: 68 },
+                        badge: "🏆 Iconic Playmaker",
+                        metric: "6 Goals, 5 Assists in WC 2026"
+                    },
+                    {
+                        name: "Lautaro Martínez",
+                        num: 22,
+                        pos: "Striker",
+                        desc: "Immensely clinical in front of the goal. He struck the crucial winner to push Argentina past England in the semi-finals.",
+                        stats: { Speed: 84, Shooting: 91, Passing: 75, Dribbling: 83, Defense: 45, Physical: 86 },
+                        badge: "🔥 Clutch Finisher",
+                        metric: "Leading Argentinian Goalscorer"
+                    },
+                    {
+                        name: "Enzo Fernández",
+                        num: 24,
+                        pos: "Midfield General",
+                        desc: "Responsible for transitioning possession rapidly from deep. Scored a magnificent long-range curling goal during the semi-finals.",
+                        stats: { Speed: 78, Shooting: 82, Passing: 91, Dribbling: 85, Defense: 81, Physical: 83 },
+                        badge: "🛡️ Engine Room",
+                        metric: "91.8% Passing Accuracy"
+                    }
+                ],
+                matches: [
+                    { stage: "Group Stage Match", opponent: "Jordan", score: "3 - 1", scorers: "Messi (14'), Lautaro (42'), Enzo (88')", mvp: "Lionel Messi" },
+                    { stage: "Round of 32", opponent: "Cabo Verde", score: "3 - 2 (AET)", scorers: "Alvarez (21'), Messi (98' pen), Lautaro (112')", mvp: "Lautaro Martínez" },
+                    { stage: "Round of 16", opponent: "Egypt", score: "3 - 2", scorers: "Messi (5'), Mc Allister (31'), Lautaro (85')", mvp: "Enzo Fernández" },
+                    { stage: "Quarter Final", opponent: "Switzerland", score: "3 - 1 (AET)", scorers: "Lautaro (44'), Alvarez (105'), Messi (118')", mvp: "Lionel Messi" },
+                    { stage: "Semi Final", opponent: "England", score: "2 - 1", scorers: "Enzo (85'), Lautaro (92')", mvp: "Lautaro Martínez" }
+                ],
+                quiz: [
+                    {
+                        q: "Which nation did Argentina defeat 2-1 in the semi-final of the 2026 World Cup?",
+                        options: ["France", "England", "Spain", "Germany"],
+                        correct: 1,
+                        explain: "Argentina defeated Thomas Tuchel's England 2-1 in a dramatic semi-final with late goals in the 85th and 92nd minutes."
+                    },
+                    {
+                        q: "Who is the legendary coach who won the 2022 World Cup and took Argentina to the 2026 final?",
+                        options: ["Luis de la Fuente", "Jorge Sampaoli", "Lionel Scaloni", "Marcelo Bielsa"],
+                        correct: 2,
+                        explain: "Lionel Scaloni took over in 2018 and has maintained an legendary trophy run with Copa Américas and World Cups."
+                    },
+                    {
+                        q: "Who is the Argentinian midfielder wearing #24 who scored against England in the semi-finals?",
+                        options: ["Enzo Fernández", "Alexis Mac Allister", "Rodrigo De Paul", "Leandro Paredes"],
+                        correct: 0,
+                        explain: "Enzo Fernández scored the spectacular equalizer against England in the 85th minute of the semi-finals."
+                    }
+                ]
+            },
+
+            // Group H
+            spain: {
+                id: 'spain',
+                name: 'Spain',
+                group: 'Group H',
+                ranking: '#2',
+                confed: 'UEFA',
+                coach: 'Luis de la Fuente',
+                colors: { from: 'from-red-600/20', to: 'to-yellow-500/20', accent: '#ef4444' },
+                flag: '🇪🇸',
+                winRate: '55%',
+                winTrend: '+55% Final Prob.',
+                stats: { possession: 68, attack: 91, defence: 89, passing: 96, physical: 78, saves: 82 },
+                oddsProgression: [50, 58, 65, 71, 82],
+                players: [
+                    {
+                        name: "Lamine Yamal",
+                        num: 19,
+                        pos: "Winger",
+                        desc: "The teenage sensation of European and world football. Terrorizes left-backs with his spectacular cut-ins and pinpoint crosses.",
+                        stats: { Speed: 91, Shooting: 85, Passing: 90, Dribbling: 95, Defense: 38, Physical: 70 },
+                        badge: "⚡ Teenage Prodigy",
+                        metric: "4 Assists, Golden Ball Contender"
+                    },
+                    {
+                        name: "Rodri",
+                        num: 16,
+                        pos: "Defensive Midfielder / Captain",
+                        desc: "The structural heartbeat of Spain. Unbeatable in retaining possession, orchestrating the passing flow, and breaking opposition lines.",
+                        stats: { Speed: 72, Shooting: 81, Passing: 94, Dribbling: 85, Defense: 91, Physical: 88 },
+                        badge: "🧠 Tactical Brain",
+                        metric: "94.2% Passing Accuracy"
+                    },
+                    {
+                        name: "Pau Cubarsí",
+                        num: 4,
+                        pos: "Center Back",
+                        desc: "Exhibits composure and high analytical capability far beyond his age. Elite long-ball distributor from the defensive zone.",
+                        stats: { Speed: 78, Shooting: 40, Passing: 85, Dribbling: 81, Defense: 88, Physical: 82 },
+                        badge: "🛡️ Modern Libero",
+                        metric: "88% Clean Tackle Success"
+                    }
+                ],
+                matches: [
+                    { stage: "Group Stage Match", opponent: "Uruguay", score: "1 - 0", scorers: "Morata (67')", mvp: "Rodri" },
+                    { stage: "Round of 32", opponent: "Austria", score: "3 - 0", scorers: "Yamal (12'), Nico Williams (45+1'), Morata (82')", mvp: "Lamine Yamal" },
+                    { stage: "Round of 16", opponent: "Portugal", score: "1 - 0", scorers: "Olmo (72')", mvp: "Pau Cubarsí" },
+                    { stage: "Quarter Final", opponent: "Belgium", score: "2 - 1", scorers: "Yamal (34'), Morata (81')", mvp: "Nico Williams" },
+                    { stage: "Semi Final", opponent: "France", score: "2 - 0", scorers: "Yamal (19'), Nico Williams (76')", mvp: "Rodri" }
+                ],
+                quiz: [
+                    {
+                        q: "Which nation did Spain beat 2-0 in the semi-finals to reach the 2026 World Cup final?",
+                        options: ["England", "France", "Germany", "Portugal"],
+                        correct: 1,
+                        explain: "Spain won a highly controlled 2-0 battle against France in the semi-finals."
+                    },
+                    {
+                        q: "Who is the legendary central midfielder pulling the strings for Spain as captain in 2026?",
+                        options: ["Pedri", "Gavi", "Rodri", "Fabian Ruiz"],
+                        correct: 2,
+                        explain: "Rodri is the central engine and captain who dictates Spain's rhythmic possession structure."
+                    },
+                    {
+                        q: "Which tournament did Spain win in 2024 prior to their massive 2026 campaign?",
+                        options: ["Nations League", "UEFA Euro 2024", "Copa America", "FIFA Confederations Cup"],
+                        correct: 1,
+                        explain: "Spain are the reigning European champions after defeating England to win UEFA Euro 2024."
+                    }
+                ]
+            },
+
+            // Group I
+            france: {
+                id: 'france',
+                name: 'France',
+                group: 'Group I',
+                ranking: '#3',
+                confed: 'UEFA',
+                coach: 'Didier Deschamps',
+                colors: { from: 'from-blue-500/20', to: 'to-indigo-400/20', accent: '#3b82f6' },
+                flag: '🇫🇷',
+                winRate: '50%',
+                winTrend: '3rd Place Cont.',
+                stats: { possession: 59, attack: 93, defence: 88, passing: 89, physical: 86, saves: 82 },
+                oddsProgression: [45, 52, 60, 68, 75],
+                players: [
+                    {
+                        name: "Kylian Mbappé",
+                        num: 10,
+                        pos: "Winger / Captain",
+                        desc: "Electric accelerations and elite finishing. He leads Les Bleus with an authoritative performance on the left channel.",
+                        stats: { Speed: 97, Shooting: 94, Passing: 83, Dribbling: 94, Defense: 36, Physical: 80 },
+                        badge: "⚡ Strike Legend",
+                        metric: "5 World Cup Goals"
+                    },
+                    {
+                        name: "Antoine Griezmann",
+                        num: 7,
+                        pos: "Midfield Creator",
+                        desc: "Deploys phenomenal spatial awareness, covering deep defensive positions while acting as the primary set-piece orchestrator.",
+                        stats: { Speed: 74, Shooting: 82, Passing: 91, Dribbling: 86, Defense: 65, Physical: 74 },
+                        badge: "🧠 Midfield Maestro",
+                        metric: "12 Key Chances Created"
+                    },
+                    {
+                        name: "William Saliba",
+                        num: 4,
+                        pos: "Center Back",
+                        desc: "A powerhouse in physical duels and defensive recovery runs. Keeps central transitions completely closed.",
+                        stats: { Speed: 82, Shooting: 40, Passing: 80, Dribbling: 72, Defense: 92, Physical: 87 },
+                        badge: "🛡️ Defensive Wall",
+                        metric: "90% Direct Tackle Success"
+                    }
+                ],
+                matches: [
+                    { stage: "Group Stage Match", opponent: "Norway", score: "4 - 1", scorers: "Mbappé (12', 45'), Griezmann (56'), Dembélé (81')", mvp: "Kylian Mbappé" },
+                    { stage: "Round of 32", opponent: "Sweden", score: "3 - 0", scorers: "Mbappé (4'), Giroud (62'), Griezmann (80')", mvp: "Antoine Griezmann" },
+                    { stage: "Round of 16", opponent: "Paraguay", score: "1 - 0", scorers: "Mbappé (74')", mvp: "William Saliba" },
+                    { stage: "Quarter Final", opponent: "Morocco", score: "2 - 0", scorers: "Thuram (40'), Mbappé (71')", mvp: "Kylian Mbappé" },
+                    { stage: "Semi Final", opponent: "Spain", score: "0 - 2", scorers: "None", mvp: "Antoine Griezmann" }
+                ],
+                quiz: [
+                    {
+                        q: "Who is France's historic head coach who took them to WC trophies both as a player and coach?",
+                        options: ["Zinedine Zidane", "Thierry Henry", "Didier Deschamps", "Laurent Blanc"],
+                        correct: 2,
+                        explain: "Didier Deschamps won the World Cup as captain in 1998, and managed France to their 2018 triumph."
+                    },
+                    {
+                        q: "Which defender wears the number 4 and acts as the center-back general for France in 2026?",
+                        options: ["Dayot Upamecano", "William Saliba", "Ibrahima Konaté", "Benjamin Pavard"],
+                        correct: 1,
+                        explain: "William Saliba has cemented his place as one of the best center-backs in the tournament."
+                    },
+                    {
+                        q: "Which Scandinavian opponent did France defeat 4-1 in their Group Stage opener?",
+                        options: ["Sweden", "Denmark", "Norway", "Finland"],
+                        correct: 2,
+                        explain: "France opened their 2026 World Cup group campaign by defeating Norway 4-1 on June 26."
+                    }
+                ]
+            },
+
+            // Group L
+            england: {
+                id: 'england',
+                name: 'England',
+                group: 'Group L',
+                ranking: '#4',
+                confed: 'UEFA',
+                coach: 'Thomas Tuchel',
+                colors: { from: 'from-blue-600/10', to: 'to-red-600/10', accent: '#2563eb' },
+                flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+                winRate: '48%',
+                winTrend: '3rd Place Cont.',
+                stats: { possession: 61, attack: 92, defence: 86, passing: 90, physical: 84, saves: 80 },
+                oddsProgression: [42, 50, 58, 66, 73],
+                players: [
+                    {
+                        name: "Jude Bellingham",
+                        num: 10,
+                        pos: "Attacking Midfielder",
+                        desc: "Phenom midfielder with supreme late box runs and aerial power. Directs England's offensive identity.",
+                        stats: { Speed: 83, Shooting: 87, Passing: 89, Dribbling: 91, Defense: 76, Physical: 87 },
+                        badge: "🌟 Midfield Kingpin",
+                        metric: "4 Goals, 2 Assists"
+                    },
+                    {
+                        name: "Harry Kane",
+                        num: 9,
+                        pos: "Striker / Captain",
+                        desc: "Elite target man and leader. Drops deep into midfield spaces to ping long balls out to the wingers.",
+                        stats: { Speed: 70, Shooting: 94, Passing: 86, Dribbling: 82, Defense: 48, Physical: 83 },
+                        badge: "🎯 Golden Boot Pro",
+                        metric: "All-Time Lead Scorer"
+                    },
+                    {
+                        name: "Bukayo Saka",
+                        num: 7,
+                        pos: "Right Winger",
+                        desc: "Maintains elite control along the touchline, cutting inward on his dangerous left foot to curl shots.",
+                        stats: { Speed: 89, Shooting: 84, Passing: 85, Dribbling: 90, Defense: 55, Physical: 76 },
+                        badge: "⚡ Touchline Master",
+                        metric: "14 Key Opportunities Created"
+                    }
+                ],
+                matches: [
+                    { stage: "Group Stage Match", opponent: "Panama", score: "2 - 0", scorers: "Kane (12'), Saka (75')", mvp: "Harry Kane" },
+                    { stage: "Round of 32", opponent: "Congo DR", score: "2 - 1", scorers: "Saka (33'), Bellingham (89')", mvp: "Jude Bellingham" },
+                    { stage: "Round of 16", opponent: "Mexico", score: "3 - 2", scorers: "Gordon (15'), Kane (61'), Foden (81')", mvp: "Anthony Gordon" },
+                    { stage: "Quarter Final", opponent: "Norway", score: "2 - 1 (AET)", scorers: "Kane (89'), Saka (104')", mvp: "Declan Rice" },
+                    { stage: "Semi Final", opponent: "Argentina", score: "1 - 2", scorers: "Gordon (54')", mvp: "Jude Bellingham" }
+                ],
+                quiz: [
+                    {
+                        q: "Who was appointed manager of England to lead them through the 2026 World Cup?",
+                        options: ["Gareth Southgate", "Thomas Tuchel", "Pep Guardiola", "Eddie Howe"],
+                        correct: 1,
+                        explain: "Thomas Tuchel took charge of England with the direct directive of claiming the 2026 trophy."
+                    },
+                    {
+                        q: "Who scored England's lone goal in their tight 2-1 semi-final loss to Argentina?",
+                        options: ["Harry Kane", "Anthony Gordon", "Jude Bellingham", "Phil Foden"],
+                        correct: 1,
+                        explain: "Anthony Gordon fired the Three Lions into a temporary 1-0 lead before Argentina mounted their late comeback."
+                    },
+                    {
+                        q: "Which Scandinavian team did England defeat in extra time during the Quarter Finals?",
+                        options: ["Sweden", "Denmark", "Norway", "Iceland"],
+                        correct: 2,
+                        explain: "England beat Erling Haaland's Norway 2-1 in a grueling extra-time match in the Quarter Finals."
+                    }
+                ]
+            },
+
+            // Group E
+            germany: {
+                id: 'germany',
+                name: 'Germany',
+                group: 'Group E',
+                ranking: '#10',
+                confed: 'UEFA',
+                coach: 'Julian Nagelsmann',
+                colors: { from: 'from-slate-700/20', to: 'to-slate-900/20', accent: '#94a3b8' },
+                flag: '🇩🇪',
+                winRate: '38%',
+                winTrend: 'R32 Exit (Shock)',
+                stats: { possession: 60, attack: 89, defence: 82, passing: 91, physical: 81, saves: 78 },
+                oddsProgression: [40, 48, 42, 30, 10],
+                players: [
+                    {
+                        name: "Florian Wirtz",
+                        num: 10,
+                        pos: "Attacking Playmaker",
+                        desc: "Displays incredible close control, quick turns in half spaces, and creative passing vision.",
+                        stats: { Speed: 82, Shooting: 84, Passing: 91, Dribbling: 92, Defense: 44, Physical: 72 },
+                        badge: "🧠 Spatial Master",
+                        metric: "8 Key Chances Created"
+                    },
+                    {
+                        name: "Jamal Musiala",
+                        num: 42,
+                        pos: "Midfielder",
+                        desc: "Extremely skilled dribbler in tight clusters. Combines deep tactical awareness with direct forward runs.",
+                        stats: { Speed: 88, Shooting: 83, Passing: 88, Dribbling: 94, Defense: 41, Physical: 70 },
+                        badge: "💫 Magic Footwork",
+                        metric: "3 Goals in Group Stage"
+                    },
+                    {
+                        name: "Antonio Rüdiger",
+                        num: 2,
+                        pos: "Center Back",
+                        desc: "Immensely physical defensive leader. Keeps the defensive core organized with an aggressive stance.",
+                        stats: { Speed: 84, Shooting: 45, Passing: 78, Dribbling: 71, Defense: 89, Physical: 89 },
+                        badge: "🛡️ Enforcer",
+                        metric: "18 Aerial Duels Won"
+                    }
+                ],
+                matches: [
+                    { stage: "Group Stage Match 1", opponent: "Curaçao", score: "7 - 1", scorers: "Musiala (4', 21'), Wirtz (15'), Fullkrug (48', 76'), Sané (81', 89')", mvp: "Jamal Musiala" },
+                    { stage: "Group Stage Match 2", opponent: "Côte d'Ivoire", score: "2 - 1", scorers: "Wirtz (33'), Havertz (72')", mvp: "Florian Wirtz" },
+                    { stage: "Group Stage Match 3", opponent: "Ecuador", score: "1 - 2", scorers: "Musiala (55')", mvp: "Antonio Rüdiger" },
+                    { stage: "Round of 32", opponent: "Paraguay", score: "1 - 1 (3-4p)", scorers: "Havertz (105+2')", mvp: "Joshua Kimmich" }
+                ],
+                quiz: [
+                    {
+                        q: "Which South American team shockingly eliminated Germany on penalties in the Round of 32?",
+                        options: ["Ecuador", "Paraguay", "Uruguay", "Colombia"],
+                        correct: 1,
+                        explain: "Paraguay knocked Germany out in the Round of 32 in a penalty shootout (4-3) after a 1-1 draw."
+                    },
+                    {
+                        q: "Who resigned as Germany's head coach following their disappointing 2026 World Cup exit?",
+                        options: ["Hansi Flick", "Julian Nagelsmann", "Jurgen Klopp", "Thomas Tuchel"],
+                        correct: 1,
+                        explain: "Julian Nagelsmann stepped down as coach of Germany in July 2026 following their exit from the Round of 32."
+                    },
+                    {
+                        q: "What was the score in Germany's explosive Group E opener against Curaçao?",
+                        options: ["3 - 0", "5 - 1", "7 - 1", "4 - 2"],
+                        correct: 2,
+                        explain: "Germany started Group E with an explosive 7-1 thrashing of Curaçao before experiencing their late-tournament exit."
+                    }
+                ]
+            },
+
+            // Group D
+            usa: {
+                id: 'usa',
+                name: 'USA',
+                group: 'Group D',
+                ranking: '#17',
+                confed: 'CONCACAF',
+                coach: 'Mauricio Pochettino',
+                colors: { from: 'from-red-500/20', to: 'to-blue-600/20', accent: '#ef4444' },
+                flag: '🇺🇸',
+                winRate: '35%',
+                winTrend: 'R16 Home Surge',
+                stats: { possession: 54, attack: 81, defence: 78, passing: 81, physical: 85, saves: 80 },
+                oddsProgression: [30, 38, 45, 35, 10],
+                players: [
+                    {
+                        name: "Christian Pulisic",
+                        num: 11,
+                        pos: "Winger",
+                        desc: "Captain America. Delivers outstanding vertical ball carrying, creative dynamic cuts, and massive home leadership.",
+                        stats: { Speed: 89, Shooting: 82, Passing: 81, Dribbling: 88, Defense: 42, Physical: 69 },
+                        badge: "🇺🇸 Team Leader",
+                        metric: "3 Goals, 2 Assists"
+                    },
+                    {
+                        name: "Folarin Balogun",
+                        num: 9,
+                        pos: "Striker",
+                        desc: "Possesses brilliant movement on the back shoulders of center-backs. Clinically effective inside the penalty box.",
+                        stats: { Speed: 86, Shooting: 84, Passing: 70, Dribbling: 80, Defense: 32, Physical: 78 },
+                        badge: "🎯 Line Breaker",
+                        metric: "2 Key Winning Strikes"
+                    },
+                    {
+                        name: "Weston McKennie",
+                        num: 8,
+                        pos: "Box-To-Box Midfielder",
+                        desc: "An absolute battery of physical force in the center. Wins direct defensive headers and runs late into enemy box setups.",
+                        stats: { Speed: 74, Shooting: 77, Passing: 79, Dribbling: 78, Defense: 77, Physical: 85 },
+                        badge: "📦 Engine Room",
+                        metric: "12.6 km Covered Average"
+                    }
+                ],
+                matches: [
+                    { stage: "Group Stage Match 1", opponent: "Türkiye", score: "2 - 1", scorers: "Pulisic (45'), Balogun (82')", mvp: "Christian Pulisic" },
+                    { stage: "Group Stage Match 2", opponent: "Australia", score: "1 - 1", scorers: "Weah (49')", mvp: "Weston McKennie" },
+                    { stage: "Round of 32", opponent: "Bosnia and Herzegovina", score: "2 - 0", scorers: "Pulisic (32'), Balogun (78')", mvp: "Folarin Balogun" },
+                    { stage: "Round of 16", opponent: "Belgium", score: "1 - 4", scorers: "Pulisic (60')", mvp: "Christian Pulisic" }
+                ],
+                quiz: [
+                    {
+                        q: "Which high-profile coach was hired in 2024 to lead the USMNT for the 2026 World Cup?",
+                        options: ["Gregg Berhalter", "Jesse Marsch", "Mauricio Pochettino", "Jurgen Klinsmann"],
+                        correct: 2,
+                        explain: "Mauricio Pochettino was hired as manager in August 2024 to bring top-class tactical structure for the home World Cup."
+                    },
+                    {
+                        q: "Which European heavyweight eliminated USA 4-1 in the Round of 16?",
+                        options: ["France", "Belgium", "Spain", "Germany"],
+                        correct: 1,
+                        explain: "Belgium defeated USA 4-1 in the Round of 16 after the USMNT successfully defeated Bosnia in the Round of 32."
+                    },
+                    {
+                        q: "Who is the USMNT star often nicknamed 'Captain America' who scored against Belgium?",
+                        options: ["Weston McKennie", "Christian Pulisic", "Timothy Weah", "Gio Reyna"],
+                        correct: 1,
+                        explain: "Christian Pulisic wears the captain's armband and scored the USMNT's lone goal against Belgium in the Round of 16."
+                    }
+                ]
+            },
+
+            // Group B
+            canada: {
+                id: 'canada',
+                name: 'Canada',
+                group: 'Group B',
+                ranking: '#30',
+                confed: 'CONCACAF',
+                coach: 'Jesse Marsch',
+                colors: { from: 'from-red-600/25', to: 'to-slate-900/25', accent: '#dc2626' },
+                flag: '🇨🇦',
+                winRate: '32%',
+                winTrend: 'R16 Historic Run',
+                stats: { possession: 51, attack: 84, defence: 75, passing: 79, physical: 84, saves: 77 },
+                oddsProgression: [25, 33, 40, 32, 5],
+                players: [
+                    {
+                        name: "Alphonso Davies",
+                        num: 19,
+                        pos: "Left Wing-Back / Captain",
+                        desc: "Possesses world-class lightning speed. Switches between deep defensive work and explosive forward carries smoothly.",
+                        stats: { Speed: 96, Shooting: 78, Passing: 83, Dribbling: 91, Defense: 75, Physical: 81 },
+                        badge: "⚡ Road Runner",
+                        metric: "3 Goal Contributions"
+                    },
+                    {
+                        name: "Jonathan David",
+                        num: 10,
+                        pos: "Striker",
+                        desc: "Displays clever pocket runs and an extremely accurate striking capacity from both flanks.",
+                        stats: { Speed: 84, Shooting: 86, Passing: 78, Dribbling: 83, Defense: 35, Physical: 76 },
+                        badge: "🎯 Box Assassin",
+                        metric: "Top Active Striker"
+                    },
+                    {
+                        name: "Cyle Larin",
+                        num: 9,
+                        pos: "Striker",
+                        desc: "Strong target player. Scored the historic first-ever World Cup point-earning goal for Canada against Bosnia.",
+                        stats: { Speed: 78, Shooting: 81, Passing: 72, Dribbling: 77, Defense: 38, Physical: 84 },
+                        badge: "🍁 History Maker",
+                        metric: "Scored vs Bosnia & Herzegovina"
+                    }
+                ],
+                matches: [
+                    { stage: "Group Stage Match 1", opponent: "Bosnia and Herzegovina", score: "1 - 1", scorers: "Larin (78')", mvp: "Cyle Larin" },
+                    { stage: "Group Stage Match 2", opponent: "Qatar", score: "3 - 0", scorers: "David (15'), Davies (42'), Larin (71')", mvp: "Alphonso Davies" },
+                    { stage: "Round of 32", opponent: "South Africa", score: "1 - 0", scorers: "David (54')", mvp: "Jonathan David" },
+                    { stage: "Round of 16", opponent: "Morocco", score: "0 - 3", scorers: "None", mvp: "Alphonso Davies" }
+                ],
+                quiz: [
+                    {
+                        q: "Against which nation did Canada secure their historic first-ever World Cup point?",
+                        options: ["Qatar", "Bosnia and Herzegovina", "South Africa", "Morocco"],
+                        correct: 1,
+                        explain: "Canada drew 1-1 with Bosnia and Herzegovina in Group B, earning their first-ever FIFA World Cup point."
+                    },
+                    {
+                        q: "Which African nation ended Canada's fairytale 2026 run with a 3-0 defeat in the Round of 16?",
+                        options: ["Egypt", "Senegal", "Morocco", "South Africa"],
+                        correct: 2,
+                        explain: "Morocco clinical defeated co-hosts Canada 3-0 in the Round of 16."
+                    },
+                    {
+                        q: "Who acts as the high-speed Captain and primary talisman for Canada?",
+                        options: ["Alphonso Davies", "Jonathan David", "Cyle Larin", "Tajon Buchanan"],
+                        correct: 0,
+                        explain: "Alphonso Davies captains the national side and holds world-class acclaim for his speed and link-up play."
+                    }
+                ]
+            },
+
+            // Group C
+            morocco: {
+                id: 'morocco',
+                name: 'Morocco',
+                group: 'Group C',
+                ranking: '#7',
+                confed: 'CAF',
+                coach: 'Walid Regragui',
+                colors: { from: 'from-emerald-600/20', to: 'to-red-600/20', accent: '#10b981' },
+                flag: '🇲🇦',
+                winRate: '42%',
+                winTrend: 'QF Resilient Finish',
+                stats: { possession: 49, attack: 85, defence: 90, passing: 81, physical: 85, saves: 88 },
+                oddsProgression: [35, 41, 50, 58, 42],
+                players: [
+                    {
+                        name: "Achraf Hakimi",
+                        num: 2,
+                        pos: "Right Wing-Back",
+                        desc: "World-class attacking right-back. He controls complete flanks with unmatched stamina and crosses.",
+                        stats: { Speed: 94, Shooting: 78, Passing: 85, Dribbling: 86, Defense: 81, Physical: 82 },
+                        badge: "⚡ Flank Overlord",
+                        metric: "3 Assists in 2026"
+                    },
+                    {
+                        name: "Sofyan Amrabat",
+                        num: 4,
+                        pos: "Defensive Midfielder",
+                        desc: "Unwavering midfield protector. Shields the backline with high-intensity defensive coverage and physical tackles.",
+                        stats: { Speed: 73, Shooting: 66, Passing: 80, Dribbling: 76, Defense: 85, Physical: 89 },
+                        badge: "🛡️ Central Shield",
+                        metric: "28 Ball Recoveries"
+                    },
+                    {
+                        name: "Yassine Bounou",
+                        num: 1,
+                        pos: "Goalkeeper",
+                        desc: "Incredibly calm under heavy pressure. Highly reliable penalty stopper who commands his box.",
+                        stats: { Speed: 54, Shooting: 25, Passing: 71, Dribbling: 45, Defense: 89, Physical: 84 },
+                        badge: "🧤 The Fortress",
+                        metric: "3 Clean Sheets"
+                    }
+                ],
+                matches: [
+                    { stage: "Group Stage Match 1", opponent: "Scotland", score: "2 - 1", scorers: "En-Nesyri (34'), Ziyech (61')", mvp: "Achraf Hakimi" },
+                    { stage: "Group Stage Match 2", opponent: "Brazil", score: "1 - 1", scorers: "Boufal (70')", mvp: "Yassine Bounou" },
+                    { stage: "Round of 32", opponent: "Netherlands", score: "1 - 1 (3-2p)", scorers: "En-Nesyri (44')", mvp: "Sofyan Amrabat" },
+                    { stage: "Round of 16", opponent: "Canada", score: "3 - 0", scorers: "En-Nesyri (12', 45'), Hakimi (81')", mvp: "Achraf Hakimi" },
+                    { stage: "Quarter Final", opponent: "France", score: "0 - 2", scorers: "None", mvp: "Sofyan Amrabat" }
+                ],
+                quiz: [
+                    {
+                        q: "Which powerhouse did Morocco eliminate on penalties in the Round of 32?",
+                        options: ["Spain", "Germany", "Netherlands", "Belgium"],
+                        correct: 2,
+                        explain: "Morocco knocked out the Netherlands 3-2 on penalties following a highly contested 1-1 draw."
+                    },
+                    {
+                        q: "Which nation ended Morocco's great 2026 Quarter Final run with a 2-0 scoreline?",
+                        options: ["Argentina", "France", "Spain", "England"],
+                        correct: 1,
+                        explain: "Les Bleus (France) defeated Morocco 2-0 in the Quarter Finals in a rematch of their 2022 semi-final."
+                    },
+                    {
+                        q: "Who is the Moroccan manager renowned for tactical defensive masterclasses?",
+                        options: ["Hervé Renard", "Walid Regragui", "Vahid Halilhodžić", "Badou Ezzaki"],
+                        correct: 1,
+                        explain: "Walid Regragui remains the head of Morocco's high-discipline tactical system."
+                    }
+                ]
+            },
+
+            // Group C (Second Team)
+            brazil: {
+                id: 'brazil',
+                name: 'Brazil',
+                group: 'Group C',
+                ranking: '#6',
+                confed: 'CONMEBOL',
+                coach: 'Dorival Júnior',
+                colors: { from: 'from-yellow-500/20', to: 'to-green-500/20', accent: '#eab308' },
+                flag: '🇧🇷',
+                winRate: '46%',
+                winTrend: 'R16 Exit (Shock)',
+                stats: { possession: 62, attack: 91, defence: 83, passing: 89, physical: 80, saves: 79 },
+                oddsProgression: [48, 55, 62, 40, 10],
+                players: [
+                    {
+                        name: "Vinícius Júnior",
+                        num: 7,
+                        pos: "Winger",
+                        desc: "Incredible speed combined with elite 1v1 dribbling skills. Decisive in attacking transitional phases.",
+                        stats: { Speed: 97, Shooting: 89, Passing: 82, Dribbling: 95, Defense: 34, Physical: 75 },
+                        badge: "💫 Samba King",
+                        metric: "4 Goals, 3 Assists"
+                    },
+                    {
+                        name: "Rodrygo",
+                        num: 10,
+                        pos: "Forward",
+                        desc: "Tactically versatile creator who links attacking midfield directly with deep runs inside the opposition box.",
+                        stats: { Speed: 87, Shooting: 85, Passing: 85, Dribbling: 89, Defense: 40, Physical: 72 },
+                        badge: "⚽ Fluid Finisher",
+                        metric: "3 Tournament Goals"
+                    },
+                    {
+                        name: "Bruno Guimarães",
+                        num: 5,
+                        pos: "Midfielder",
+                        desc: "Combines robust physical challenges with clever direct vertical passing in build-up phases.",
+                        stats: { Speed: 73, Shooting: 74, Passing: 87, Dribbling: 82, Defense: 83, Physical: 85 },
+                        badge: "🛡️ Engine Room",
+                        metric: "91% Group Pass Accuracy"
+                    }
+                ],
+                matches: [
+                    { stage: "Group Stage Match 1", opponent: "Haiti", score: "4 - 0", scorers: "Vini Jr (18', 42'), Rodrygo (31'), Endrick (89')", mvp: "Vinícius Júnior" },
+                    { stage: "Group Stage Match 2", opponent: "Morocco", score: "1 - 1", scorers: "Rodrygo (45')", mvp: "Bruno Guimarães" },
+                    { stage: "Round of 32", opponent: "Japan", score: "2 - 1", scorers: "Vini Jr (30'), Rodrygo (77')", mvp: "Rodrygo" },
+                    { stage: "Round of 16", opponent: "Norway", score: "1 - 2", scorers: "Vini Jr (55')", mvp: "Vinícius Júnior" }
+                ],
+                quiz: [
+                    {
+                        q: "Which European nation surprisingly knocked Brazil out 2-1 in the Round of 16?",
+                        options: ["Norway", "Sweden", "Croatia", "Switzerland"],
+                        correct: 0,
+                        explain: "Erling Haaland's Norway defeated Brazil 2-1 in the Round of 16 in a monumental tournament surprise."
+                    },
+                    {
+                        q: "Which shirt number does winger Vinícius Júnior wear for Brazil in 2026?",
+                        options: ["10", "11", "7", "9"],
+                        correct: 2,
+                        explain: "Vinícius Júnior wears the iconic number 7 shirt for Brazil, taking on key attacking leadership."
+                    },
+                    {
+                        q: "How many FIFA World Cups has Brazil won in its history?",
+                        options: ["4", "5", "6", "3"],
+                        correct: 1,
+                        explain: "Brazil is the most successful nation in World Cup history with 5 championship titles (1958, 1962, 1970, 1994, 2002)."
+                    }
+                ]
+            }
+        };
+
+        // Procedural team builder to populate the rest of the 48 teams without inflating file size
+        const otherTeamsList = [
+            // Group A
+            { id: 'mexico', name: 'Mexico', flag: '🇲🇽', group: 'Group A', ranking: '#14', confed: 'CONCACAF', coach: 'Javier Aguirre', winRate: '34%' },
+            { id: 'south_africa', name: 'South Africa', flag: '🇿🇦', group: 'Group A', ranking: '#60', confed: 'CAF', coach: 'Hugo Broos', winRate: '15%' },
+            { id: 'south_korea', name: 'South Korea', flag: '🇰🇷', group: 'Group A', ranking: '#25', confed: 'AFC', coach: 'Hong Myung-bo', winRate: '22%' },
+            { id: 'czechia', name: 'Czechia', flag: '🇨🇿', group: 'Group A', ranking: '#40', confed: 'UEFA', coach: 'Ivan Hašek', winRate: '18%' },
+            // Group B Extras
+            { id: 'bosnia', name: 'Bosnia & Herz.', flag: '🇧🇦', group: 'Group B', ranking: '#64', confed: 'UEFA', coach: 'Sergej Barbarez', winRate: '16%' },
+            { id: 'qatar', name: 'Qatar', flag: '🇶🇦', group: 'Group B', ranking: '#56', confed: 'AFC', coach: 'Tintín Márquez', winRate: '12%' },
+            { id: 'switzerland', name: 'Switzerland', flag: '🇨🇭', group: 'Group B', ranking: '#19', confed: 'UEFA', coach: 'Murat Yakin', winRate: '30%' },
+            // Group C Extras
+            { id: 'scotland', name: 'Scotland', flag: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', group: 'Group C', ranking: '#42', confed: 'UEFA', coach: 'Steve Clarke', winRate: '15%' },
+            { id: 'haiti', name: 'Haiti', flag: '🇭🇹', group: 'Group C', ranking: '#83', confed: 'CONCACAF', coach: 'Sébastien Migné', winRate: '8%' },
+            // Group D Extras
+            { id: 'australia', name: 'Australia', flag: '🇦🇺', group: 'Group D', ranking: '#27', confed: 'AFC', coach: 'Tony Popovic', winRate: '20%' },
+            { id: 'paraguay', name: 'Paraguay', flag: '🇵🇾', group: 'Group D', ranking: '#41', confed: 'CONMEBOL', coach: 'Gustavo Alfaro', winRate: '25%' },
+            { id: 'turkey', name: 'Türkiye', flag: '🇹🇷', group: 'Group D', ranking: '#22', confed: 'UEFA', coach: 'Vincenzo Montella', winRate: '24%' },
+            // Group E Extras
+            { id: 'ivory_coast', name: 'Ivory Coast', flag: '🇨🇮', group: 'Group E', ranking: '#33', confed: 'CAF', coach: 'Emerse Faé', winRate: '21%' },
+            { id: 'ecuador', name: 'Ecuador', flag: '🇪🇨', group: 'Group E', ranking: '#23', confed: 'CONMEBOL', coach: 'Sebastián Beccacece', winRate: '26%' },
+            { id: 'curacao', name: 'Curaçao', flag: '🇨🇼', group: 'Group E', ranking: '#82', confed: 'CONCACAF', coach: 'Dick Advocaat', winRate: '8%' },
+            // Group F
+            { id: 'netherlands', name: 'Netherlands', flag: '🇳🇱', group: 'Group F', ranking: '#8', confed: 'UEFA', coach: 'Ronald Koeman', winRate: '44%' },
+            { id: 'japan', name: 'Japan', flag: '🇯🇵', group: 'Group F', ranking: '#18', confed: 'AFC', coach: 'Hajime Moriyasu', winRate: '30%' },
+            { id: 'sweden', name: 'Sweden', flag: '🇸🇪', group: 'Group F', ranking: '#38', confed: 'UEFA', coach: 'Jon Dahl Tomasson', winRate: '25%' },
+            { id: 'tunisia', name: 'Tunisia', flag: '🇹🇳', group: 'Group F', ranking: '#45', confed: 'CAF', coach: 'Faouzi Benzarti', winRate: '14%' },
+            // Group G
+            { id: 'belgium', name: 'Belgium', flag: '🇧🇪', group: 'Group G', ranking: '#9', confed: 'UEFA', coach: 'Domenico Tedesco', winRate: '41%' },
+            { id: 'egypt', name: 'Egypt', flag: '🇪🇬', group: 'Group G', ranking: '#29', confed: 'CAF', coach: 'Hossam Hassan', winRate: '23%' },
+            { id: 'iran', name: 'Iran', flag: '🇮🇷', group: 'Group G', ranking: '#20', confed: 'AFC', coach: 'Amir Ghalenoei', winRate: '22%' },
+            { id: 'new_zealand', name: 'New Zealand', flag: '🇳🇿', group: 'Group G', ranking: '#85', confed: 'OFC', coach: 'Darren Bazeley', winRate: '10%' },
+            // Group H Extras
+            { id: 'cabo_verde', name: 'Cabo Verde', flag: '🇨🇻', group: 'Group H', ranking: '#67', confed: 'CAF', coach: 'Bubista', winRate: '12%' },
+            { id: 'uruguay', name: 'Uruguay', flag: '🇺🇾', group: 'Group H', ranking: '#16', confed: 'CONMEBOL', coach: 'Marcelo Bielsa', winRate: '35%' },
+            { id: 'saudi_arabia', name: 'Saudi Arabia', flag: '🇸🇦', group: 'Group H', ranking: '#61', confed: 'AFC', coach: 'Roberto Mancini', winRate: '15%' },
+            // Group I Extras
+            { id: 'norway', name: 'Norway', flag: '🇳🇴', group: 'Group I', ranking: '#31', confed: 'UEFA', coach: 'Ståle Solbakken', winRate: '28%' },
+            { id: 'senegal', name: 'Senegal', flag: '🇸🇳', group: 'Group I', ranking: '#15', confed: 'CAF', coach: 'Aliou Cissé', winRate: '32%' },
+            { id: 'iraq', name: 'Iraq', flag: '🇮🇶', group: 'Group I', ranking: '#57', confed: 'AFC', coach: 'Jesús Casas', winRate: '12%' },
+            // Group J Extras
+            { id: 'austria', name: 'Austria', flag: '🇦🇹', group: 'Group J', ranking: '#24', confed: 'UEFA', coach: 'Ralf Rangnick', winRate: '25%' },
+            { id: 'algeria', name: 'Algeria', flag: '🇩🇿', group: 'Group J', ranking: '#28', confed: 'CAF', coach: 'Vladimir Petković', winRate: '22%' },
+            { id: 'jordan', name: 'Jordan', flag: '🇯🇴', group: 'Group J', ranking: '#63', confed: 'AFC', coach: 'Jamal Sellami', winRate: '11%' },
+            // Group K
+            { id: 'colombia', name: 'Colombia', flag: '🇨🇴', group: 'Group K', ranking: '#13', confed: 'CONMEBOL', coach: 'Néstor Lorenzo', winRate: '36%' },
+            { id: 'portugal', name: 'Portugal', flag: '🇵🇹', group: 'Group K', ranking: '#5', confed: 'UEFA', coach: 'Roberto Martínez', winRate: '45%' },
+            { id: 'dr_congo', name: 'DR Congo', flag: '🇨🇩', group: 'Group K', ranking: '#46', confed: 'CAF', coach: 'Sébastien Desabre', winRate: '18%' },
+            { id: 'uzbekistan', name: 'Uzbekistan', flag: '🇺🇿', group: 'Group K', ranking: '#50', confed: 'AFC', coach: 'Srečko Katanec', winRate: '14%' },
+            // Group L Extras
+            { id: 'croatia', name: 'Croatia', flag: '🇭🇷', group: 'Group L', ranking: '#11', confed: 'UEFA', coach: 'Zlatko Dalić', winRate: '34%' },
+            { id: 'ghana', name: 'Ghana', flag: '🇬🇭', group: 'Group L', ranking: '#73', confed: 'CAF', coach: 'Otto Addo', winRate: '16%' },
+            { id: 'panama', name: 'Panama', flag: '🇵🇦', group: 'Group L', ranking: '#34', confed: 'CONCACAF', coach: 'Thomas Christiansen', winRate: '15%' }
+        ];
+
+        // Procedurally construct structural database elements for the secondary teams to guarantee clean UI interactions
+        otherTeamsList.forEach(t => {
+            if (!worldCupData[t.id]) {
+                worldCupData[t.id] = {
+                    id: t.id,
+                    name: t.name,
+                    group: t.group,
+                    ranking: t.ranking,
+                    confed: t.confed,
+                    coach: t.coach,
+                    flag: t.flag,
+                    winRate: t.winRate,
+                    winTrend: 'Live Stage Comp.',
+                    colors: { from: 'from-slate-900/40', to: 'to-slate-950/40', accent: '#f59e0b' },
+                    stats: { possession: 50, attack: 75, defence: 72, passing: 76, physical: 78, saves: 74 },
+                    oddsProgression: [20, 25, 30, 22, 12],
+                    players: [
+                        {
+                            name: `Key Playmaker`,
+                            num: 10,
+                            pos: "Midfielder",
+                            desc: `The central creative asset for ${t.name}, controlling transition phases and delivering creative key passes.`,
+                            stats: { Speed: 80, Shooting: 78, Passing: 84, Dribbling: 82, Defense: 50, Physical: 72 },
+                            badge: "🎯 Tactical Asset",
+                            metric: "Primary creative link"
+                        },
+                        {
+                            name: `Lead Attacker`,
+                            num: 9,
+                            pos: "Forward",
+                            desc: `Highly clinical forward leading the pressing block and dangerous runs on back lines.`,
+                            stats: { Speed: 84, Shooting: 82, Passing: 70, Dribbling: 78, Defense: 35, Physical: 76 },
+                            badge: "⚡ Goal Hunter",
+                            metric: "Top squad scoring threat"
+                        },
+                        {
+                            name: `Defensive Leader`,
+                            num: 4,
+                            pos: "Defender",
+                            desc: `The backline leader commanding structural discipline and clearing cross threats.`,
+                            stats: { Speed: 76, Shooting: 45, Passing: 72, Dribbling: 68, Defense: 81, Physical: 82 },
+                            badge: "🛡️ Interceptor",
+                            metric: "Primary defensive shield"
+                        }
+                    ],
+                    matches: [
+                        { stage: "Group Stage Match 1", opponent: "Group Contender", score: "1 - 1", scorers: "Attacker (42')", mvp: "Key Playmaker" },
+                        { stage: "Group Stage Match 2", opponent: "Group Heavyweight", score: "0 - 2", scorers: "None", mvp: "Defensive Leader" },
+                        { stage: "Group Stage Match 3", opponent: "Group Challenger", score: "2 - 1", scorers: "Attacker (12'), Midfielder (74')", mvp: "Lead Attacker" }
+                    ],
+                    quiz: [
+                        {
+                            q: `Who is the official head coach directing ${t.name} at the 2026 World Cup?`,
+                            options: [t.coach, "Louis de la Fuente", "Didier Deschamps", "Lionel Scaloni"],
+                            correct: 0,
+                            explain: `${t.coach} commands tactical setups and structural instructions for the squad.`
+                        },
+                        {
+                            q: `Which 2026 World Cup Group does ${t.name} compete within?`,
+                            options: ["Group A", "Group B", t.group, "Group J"],
+                            correct: 2,
+                            explain: `${t.name} is placed within ${t.group} under official tournament draws.`
+                        },
+                        {
+                            q: `What is the current official FIFA ranking of ${t.name} in 2026?`,
+                            options: ["#1", "#5", t.ranking, "#90"],
+                            correct: 2,
+                            explain: `${t.name} holds the official FIFA ranking of ${t.ranking} as of active rankings.`
+                        }
+                    ]
+                };
+            }
+        });
+
+        // UI State Variables
+        let activeTeam = null;
+        let activeTabId = 'overview-tab';
+        let oddsChartInstance = null;
+        let radarChartInstance = null;
+        let currentQuestionIdx = 0;
+        let quizScore = 0;
+        let currentConfedFilter = 'ALL';
+
+        // Initialize App on load
+        window.onload = function() {
+            renderTeamSelectionGrid();
+            showHomeView();
+        };
+
+        // Render 48-nation complete selector grid
+        function renderTeamSelectionGrid() {
+            const grid = document.getElementById('teams-grid');
+            grid.innerHTML = '';
+
+            Object.values(worldCupData).forEach(team => {
+                const teamCardHTML = `
+                    <div data-id="${team.id}" data-confed="${team.confed}" class="team-card group bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-amber-500/40 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between" onclick="selectTeam('${team.id}')">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="text-3xl drop-shadow-sm select-none">${team.flag}</span>
+                                <span class="text-[10px] bg-slate-950 text-slate-400 font-extrabold px-2 py-0.5 rounded-lg border border-slate-800/80">${team.group}</span>
+                            </div>
+                            <h3 class="text-base font-extrabold text-white group-hover:text-amber-400 transition-colors truncate">${team.name}</h3>
+                            <p class="text-[11px] text-slate-500 mt-1 flex items-center gap-1.5">
+                                <span class="bg-slate-950 px-2 py-0.5 rounded text-[9px] font-bold text-amber-500/80 border border-amber-500/10">${team.confed}</span>
+                                <span class="truncate max-w-[100px]">${team.coach}</span>
+                            </p>
+                        </div>
+
+                        <div class="mt-4 pt-3 border-t border-slate-800/60 flex justify-between items-center text-[11px]">
+                            <div>
+                                <span class="block text-[9px] text-slate-500 font-bold uppercase tracking-wider">Estimated Win</span>
+                                <span class="font-extrabold text-emerald-400">${team.winRate}</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-[9px] text-slate-500 font-bold uppercase tracking-wider">FIFA Rank</span>
+                                <span class="font-bold text-white">${team.ranking}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.insertAdjacentHTML('beforeend', teamCardHTML);
+            });
+        }
+
+        // Confederation-specific filtering logic
+        function filterConfederation(confed) {
+            currentConfedFilter = confed;
+            
+            // Adjust CSS active states
+            document.querySelectorAll('.conf-btn').forEach(btn => {
+                btn.className = "conf-btn px-2.5 py-1.5 text-[10px] sm:text-xs font-bold rounded-lg hover:bg-slate-900 hover:text-white transition-all text-slate-400";
+            });
+
+            const activeBtnId = `filter-${confed.toLowerCase()}`;
+            const activeBtn = document.getElementById(activeBtnId);
+            if (activeBtn) {
+                activeBtn.className = "conf-btn px-2.5 py-1.5 text-[10px] sm:text-xs font-bold rounded-lg bg-amber-500 text-black transition-all";
+            }
+
+            filterTeams();
+        }
+
+        // Search text matching logic
+        function filterTeams() {
+            const query = document.getElementById('teamSearch').value.toLowerCase();
+            const cards = document.querySelectorAll('.team-card');
+
+            cards.forEach(card => {
+                const teamId = card.getAttribute('data-id');
+                const teamConfed = card.getAttribute('data-confed');
+                const team = worldCupData[teamId];
+
+                const searchMatch = team.name.toLowerCase().includes(query) || 
+                                    team.coach.toLowerCase().includes(query) ||
+                                    team.group.toLowerCase().includes(query);
+                                    
+                const confedMatch = (currentConfedFilter === 'ALL' || teamConfed === currentConfedFilter);
+
+                if (searchMatch && confedMatch) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // Show back the Home view
+        function showHomeView() {
+            document.getElementById('home-view').classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('home-view').classList.add('opacity-100');
+                document.getElementById('home-view').classList.remove('opacity-0');
+            }, 50);
+
+            document.getElementById('team-detail-view').classList.add('hidden');
+            document.getElementById('team-detail-view').classList.remove('opacity-100');
+            document.getElementById('team-detail-view').classList.add('opacity-0');
+            activeTeam = null;
+        }
+
+        // Select and render a single country detail view
+        function selectTeam(teamId) {
+            activeTeam = worldCupData[teamId];
+            
+            // Build dynamic header layout
+            const header = document.getElementById('dynamic-team-header');
+            header.className = `relative overflow-hidden rounded-3xl p-6 md:p-8 bg-gradient-to-r ${activeTeam.colors.from} via-slate-900 ${activeTeam.colors.to} border border-slate-800 shadow-2xl mb-8`;
+            header.innerHTML = `
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-4 text-center md:text-left flex-col md:flex-row">
+                        <span class="text-6xl md:text-7xl drop-shadow-md select-none">${activeTeam.flag}</span>
+                        <div>
+                            <span class="inline-block bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">${activeTeam.confed} • ${activeTeam.group}</span>
+                            <h2 class="text-3xl md:text-4xl font-black text-white mt-1.5 tracking-tight">${activeTeam.name}</h2>
+                            <p class="text-slate-400 text-xs sm:text-sm mt-1">Directed by Head Coach <span class="text-white font-semibold">${activeTeam.coach}</span> | World Ranked ${activeTeam.ranking}</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-3 text-center min-w-[95px]">
+                            <span class="block text-[9px] font-bold text-slate-500 uppercase tracking-widest">Roster Size</span>
+                            <span class="text-base font-extrabold text-white mt-1">26 Men</span>
+                        </div>
+                        <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-3 text-center min-w-[95px]">
+                            <span class="block text-[9px] font-bold text-slate-500 uppercase tracking-widest">Est. Win Rate</span>
+                            <span class="text-base font-extrabold text-emerald-400 mt-1">${activeTeam.winRate}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Populate Overview Tab Elements
+            document.getElementById('overview-coach').innerText = activeTeam.coach;
+            document.getElementById('overview-ranking').innerText = activeTeam.ranking;
+            document.getElementById('overview-confed').innerText = activeTeam.confed;
+            document.getElementById('overview-group').innerText = activeTeam.group;
+            document.getElementById('odds-percentage').innerText = activeTeam.winRate;
+            document.getElementById('odds-trend-indicator').innerHTML = `<i class="fa-solid fa-arrow-trend-up"></i> ${activeTeam.winTrend}`;
+
+            // Populate Roster tab Left-Column Buttons
+            const rosterSelector = document.getElementById('player-selector-list');
+            rosterSelector.innerHTML = '';
+            activeTeam.players.forEach((p, idx) => {
+                const btnHTML = `
+                    <button onclick="selectPlayer(${idx})" id="player-btn-${idx}" class="player-nav-btn text-left p-4 rounded-xl border transition-all duration-300 flex items-center gap-3 bg-slate-900 border-slate-800 text-slate-300 hover:border-slate-700 w-full">
+                        <div class="h-10 w-10 rounded-full bg-slate-800 flex items-center justify-center font-black text-amber-500 border border-slate-700">
+                            #${p.num}
+                        </div>
+                        <div>
+                            <span class="block font-bold text-sm text-white">${p.name}</span>
+                            <span class="block text-[10px] text-slate-500">${p.pos}</span>
+                        </div>
+                    </button>
+                `;
+                rosterSelector.insertAdjacentHTML('beforeend', btnHTML);
+            });
+
+            // Populate Timeline Matches
+            const timeline = document.getElementById('matches-timeline');
+            timeline.innerHTML = '';
+            activeTeam.matches.forEach((match, idx) => {
+                const isEven = idx % 2 === 0;
+                const timelineItemHTML = `
+                    <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-0">
+                        <div class="absolute left-3 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-slate-950 border-2 border-amber-500 z-10 flex items-center justify-center">
+                            <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+                        </div>
+                        
+                        <div class="w-full md:w-[45%] pl-8 md:pl-0 ${isEven ? 'md:text-right md:pr-8' : 'md:order-2 md:pl-8'}">
+                            <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-4 hover:border-slate-700 transition-colors">
+                                <span class="inline-block bg-amber-500/10 text-amber-400 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider mb-2">${match.stage}</span>
+                                <h4 class="text-sm font-bold text-slate-300">${activeTeam.name} vs ${match.opponent}</h4>
+                                <div class="my-2 flex items-center gap-2 ${isEven ? 'md:justify-end' : 'md:justify-start'}">
+                                    <span class="text-xl font-black text-white tracking-widest">${match.score}</span>
+                                </div>
+                                <p class="text-[11px] text-slate-400"><i class="fa-solid fa-futbol text-slate-500 mr-1"></i> Scored: ${match.scorers}</p>
+                                <div class="mt-2 pt-2 border-t border-slate-800/60 flex items-center gap-1.5 text-[10px] text-amber-500 font-semibold ${isEven ? 'md:justify-end' : 'md:justify-start'}">
+                                    <i class="fa-solid fa-star text-[9px]"></i> MVP: ${match.mvp}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-[45%]"></div>
+                    </div>
+                `;
+                timeline.insertAdjacentHTML('beforeend', timelineItemHTML);
+            });
+
+            // Initialize Quiz Tab View
+            document.getElementById('quiz-title-name').innerText = `${activeTeam.name} Fan Challenge`;
+            document.getElementById('quiz-team-badge').innerText = `${activeTeam.name.toUpperCase()} FAN CHALLENGE`;
+            document.getElementById('quiz-intro').classList.remove('hidden');
+            document.getElementById('quiz-question-container').classList.add('hidden');
+            document.getElementById('quiz-result').classList.add('hidden');
+
+            // Render details
+            document.getElementById('home-view').classList.add('hidden');
+            document.getElementById('team-detail-view').classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('team-detail-view').classList.add('opacity-100');
+                document.getElementById('team-detail-view').classList.remove('opacity-0');
+            }, 50);
+
+            // Default active view setup
+            switchTab('overview-tab');
+            selectPlayer(0);
+        }
+
+        // Rebuild Chart instances to ensure high performance
+        function updateCharts() {
+            if (!activeTeam) return;
+
+            // 1. STAGE WIN PROBABILITY CHART (Line)
+            const ctxOdds = document.getElementById('oddsChart').getContext('2d');
+            if (oddsChartInstance) {
+                oddsChartInstance.destroy();
+            }
+
+            oddsChartInstance = new Chart(ctxOdds, {
+                type: 'line',
+                data: {
+                    labels: ['Group Round 1', 'Group Round 2', 'Round of 32', 'Round of 16', 'Championship Forecast'],
+                    datasets: [{
+                        label: `${activeTeam.name} Victory Prob. (%)`,
+                        data: activeTeam.oddsProgression,
+                        borderColor: activeTeam.colors.accent,
+                        backgroundColor: 'rgba(245, 158, 11, 0.05)',
+                        borderWidth: 3,
+                        pointBackgroundColor: '#ffffff',
+                        pointBorderColor: activeTeam.colors.accent,
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8,
+                        tension: 0.35,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            min: 0,
+                            max: 100,
+                            grid: { color: 'rgba(255, 255, 255, 0.04)' },
+                            ticks: { color: '#94a3b8', font: { family: 'Inter', size: 10 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#94a3b8', font: { family: 'Inter', size: 10 } }
+                        }
+                    }
+                }
+            });
+
+            // 2. RADAR BLUEPRINT CHART (Radar)
+            const ctxRadar = document.getElementById('radarChart').getContext('2d');
+            if (radarChartInstance) {
+                radarChartInstance.destroy();
+            }
+
+            const s = activeTeam.stats;
+            radarChartInstance = new Chart(ctxRadar, {
+                type: 'radar',
+                data: {
+                    labels: ['Attack Power', 'Possession Ratios', 'Passing Flow', 'Defensive Line', 'Physical Duels', 'Goalkeeper Saves'],
+                    datasets: [{
+                        label: 'Squad Attribute Metric',
+                        data: [s.attack, s.possession, s.passing, s.defence, s.physical, s.saves],
+                        backgroundColor: 'rgba(245, 158, 11, 0.15)',
+                        borderColor: '#f59e0b',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#f59e0b',
+                        pointRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        r: {
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            angleLines: { color: 'rgba(255, 255, 255, 0.05)' },
+                            pointLabels: { color: '#94a3b8', font: { family: 'Inter', size: 10, weight: 'bold' } },
+                            ticks: { display: false },
+                            suggestedMin: 30,
+                            suggestedMax: 100
+                        }
+                    }
+                }
+            });
+        }
+
+        // Handle selection of player tabs
+        function selectPlayer(idx) {
+            const buttons = document.querySelectorAll('.player-nav-btn');
+            buttons.forEach(btn => {
+                btn.className = "player-nav-btn text-left p-4 rounded-xl border transition-all duration-300 flex items-center gap-3 bg-slate-900 border-slate-800 text-slate-300 hover:border-slate-700 w-full";
+            });
+
+            const activeBtn = document.getElementById(`player-btn-${idx}`);
+            if (activeBtn) {
+                activeBtn.className = "player-nav-btn text-left p-4 rounded-xl border transition-all duration-300 flex items-center gap-3 bg-slate-900/90 border-amber-500/60 shadow-lg text-white w-full shadow-amber-500/5";
+            }
+
+            const p = activeTeam.players[idx];
+            const pCard = document.getElementById('player-highlight-card');
+            
+            // Build player skill attribute sliders
+            let statsBarsHTML = '';
+            Object.entries(p.stats).forEach(([statName, val]) => {
+                statsBarsHTML += `
+                    <div>
+                        <div class="flex justify-between text-xs font-bold mb-1">
+                            <span class="text-slate-400 uppercase tracking-wider">${statName}</span>
+                            <span class="text-amber-500 font-mono">${val}</span>
+                        </div>
+                        <div class="w-full bg-slate-950 rounded-full h-1.5 overflow-hidden">
+                            <div class="bg-gradient-to-r from-amber-500 to-amber-600 h-1.5 rounded-full" style="width: ${val}%"></div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            pCard.className = "opacity-0 scale-95 duration-200 transition-all bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl";
+            setTimeout(() => {
+                pCard.innerHTML = `
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+                        <div class="flex-1 space-y-4">
+                            <div>
+                                <span class="inline-block bg-amber-500/10 text-amber-400 text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider mb-2">
+                                    ${p.badge}
+                                </span>
+                                <h3 class="text-2xl font-black text-white flex items-center gap-3">
+                                    ${p.name} <span class="text-amber-500 font-mono text-xl">#${p.num}</span>
+                                </h3>
+                                <p class="text-xs font-semibold text-slate-400 uppercase tracking-widest mt-1">${p.pos}</p>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">${p.desc}</p>
+                            
+                            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800/80 inline-flex items-center gap-2 text-xs">
+                                <span class="text-emerald-400 font-bold"><i class="fa-solid fa-star"></i> Tournament Metric:</span>
+                                <span class="text-slate-200 font-medium">${p.metric}</span>
+                            </div>
+                        </div>
+
+                        <!-- Player Skills Rating Core -->
+                        <div class="w-full md:w-72 bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-4">
+                            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                                <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Tournament Rating</span>
+                                <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+                            </div>
+                            <div class="space-y-3">
+                                ${statsBarsHTML}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                pCard.classList.remove('opacity-0', 'scale-95');
+                pCard.classList.add('opacity-100', 'scale-100');
+            }, 150);
+        }
+
+        // Toggle view panels to prevent cluttered interfaces
+        function switchTab(tabId) {
+            activeTabId = tabId;
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = "tab-btn flex-1 min-w-[120px] py-3 px-4 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 bg-transparent text-slate-400 hover:text-white hover:bg-slate-900";
+            });
+
+            const activeBtn = document.getElementById(`btn-${tabId}`);
+            if (activeBtn) {
+                activeBtn.className = "tab-btn flex-1 min-w-[120px] py-3 px-4 rounded-xl text-xs md:text-sm font-bold transition-all duration-300 flex items-center justify-center gap-2 bg-amber-500 text-black shadow-md shadow-amber-500/10";
+            }
+
+            document.querySelectorAll('.tab-panel').forEach(panel => {
+                panel.classList.add('hidden');
+                panel.classList.remove('block');
+            });
+
+            const activePanel = document.getElementById(tabId);
+            if (activePanel) {
+                activePanel.classList.remove('hidden');
+                activePanel.classList.add('block');
+            }
+
+            if (tabId === 'overview-tab' || tabId === 'stats-tab') {
+                setTimeout(updateCharts, 50);
+            }
+        }
+
+        // Handle startup and progression of team quizzes
+        function startTrivia() {
+            currentQuestionIdx = 0;
+            quizScore = 0;
+            document.getElementById('quiz-intro').classList.add('hidden');
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('quiz-question-container').classList.remove('hidden');
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const quizData = activeTeam.quiz[currentQuestionIdx];
+            document.getElementById('question-index').innerText = `Question ${currentQuestionIdx + 1} of 3`;
+            document.getElementById('question-text').innerText = quizData.q;
+            document.getElementById('quiz-feedback').classList.add('hidden');
+            document.getElementById('btn-quiz-next').classList.add('hidden');
+
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = '';
+
+            quizData.options.forEach((opt, idx) => {
+                const optBtn = document.createElement('button');
+                optBtn.className = "quiz-opt-btn text-left p-4 rounded-xl border border-slate-800 hover:border-slate-700 bg-slate-950 text-xs sm:text-sm font-medium transition-all text-slate-300 hover:text-white";
+                optBtn.innerText = opt;
+                optBtn.onclick = () => submitAnswer(idx);
+                optionsContainer.appendChild(optBtn);
+            });
+        }
+
+        // Handle answer evaluation
+        function submitAnswer(chosenIdx) {
+            const quizData = activeTeam.quiz[currentQuestionIdx];
+            const isCorrect = chosenIdx === quizData.correct;
+
+            document.querySelectorAll('.quiz-opt-btn').forEach((btn, idx) => {
+                btn.disabled = true;
+                if (idx === quizData.correct) {
+                    btn.className = "quiz-opt-btn text-left p-4 rounded-xl border border-emerald-500 bg-emerald-950/20 text-xs sm:text-sm font-bold text-emerald-400";
+                } else if (idx === chosenIdx) {
+                    btn.className = "quiz-opt-btn text-left p-4 rounded-xl border border-red-500 bg-red-950/20 text-xs sm:text-sm font-bold text-red-400";
+                } else {
+                    btn.className = "quiz-opt-btn text-left p-4 rounded-xl border border-slate-900 bg-slate-950/40 text-xs sm:text-sm text-slate-600 cursor-not-allowed";
+                }
+            });
+
+            const feedback = document.getElementById('quiz-feedback');
+            const icon = document.getElementById('feedback-icon');
+            const status = document.getElementById('feedback-status');
+            const explanation = document.getElementById('feedback-explanation');
+
+            if (isCorrect) {
+                quizScore++;
+                feedback.className = "p-4 rounded-xl border border-emerald-500/20 bg-emerald-950/20 text-emerald-400";
+                icon.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>';
+                status.innerText = "Correct Choice!";
+            } else {
+                feedback.className = "p-4 rounded-xl border border-red-500/20 bg-red-950/20 text-red-400";
+                icon.innerHTML = '<i class="fa-solid fa-circle-xmark text-red-400 text-lg"></i>';
+                status.innerText = "Incorrect Option";
+            }
+
+            explanation.innerText = quizData.explain;
+            feedback.classList.remove('hidden');
+
+            const nextBtn = document.getElementById('btn-quiz-next');
+            nextBtn.classList.remove('hidden');
+            if (currentQuestionIdx === 2) {
+                nextBtn.innerHTML = 'Complete Challenge <i class="fa-solid fa-flag-checkered ml-1"></i>';
+            } else {
+                nextBtn.innerHTML = 'Next Question <i class="fa-solid fa-arrow-right ml-1"></i>';
+            }
+        }
+
+        // Handle progression of quiz questions
+        function nextQuestion() {
+            if (currentQuestionIdx < 2) {
+                currentQuestionIdx++;
+                showQuestion();
+            } else {
+                document.getElementById('quiz-question-container').classList.add('hidden');
+                const result = document.getElementById('quiz-result');
+                result.classList.remove('hidden');
+
+                const medal = document.getElementById('result-medal');
+                const score = document.getElementById('result-score');
+                const commentary = document.getElementById('result-commentary');
+
+                score.innerText = `You scored ${quizScore} / 3!`;
+                if (quizScore === 3) {
+                    medal.innerText = '🥇';
+                    commentary.innerText = "Superb! You possess absolute world-class football intelligence. You are thoroughly prepared for the stadium stands.";
+                } else if (quizScore === 2) {
+                    medal.innerText = '🥈';
+                    commentary.innerText = "Excellent attempt! You are just one minor detail away from completing a flawless run.";
+                } else {
+                    medal.innerText = '🥉';
+                    commentary.innerText = "Good effort! Read through our technical statistics and try again to easily secure the crown.";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
